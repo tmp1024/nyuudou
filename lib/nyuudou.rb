@@ -1,5 +1,6 @@
 require "nyuudou/version"
+require "nyuudou/extension/enumerable"
+require "nyuudou/extension/array"
 
 module Nyuudou
-  # Your code goes here...
 end
