@@ -6,7 +6,8 @@ Nyuudou is sort algorithm library.
 
 ## Implementation
 
-* Bubble Sort
+* Bubble Sort (Array#bubble_sort, Array#bubble_sort!)
+* Selection Sort (Array#selection_sort, Array#selection_sort!)
 
 ## Installation
 
