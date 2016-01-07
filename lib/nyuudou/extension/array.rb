@@ -17,4 +17,27 @@ class Array
     }
     self
   end
+
+  def selection_sort
+    ary = self.dup
+    (0...(ary.length - 1)).each { |i|
+      min = i
+      ((i+1)...(ary.length)).each { |j|
+        min = j if ary[j] < ary[min]
+      }
+      ary[i], ary[min] = ary[min], ary[i]
+    }
+    ary
+  end
+
+  def selection_sort!
+    (0...(self.length - 1)).each { |i|
+      min = i
+      ((i+1)...(self.length)).each { |j|
+        min = j if self[j] < self[min]
+      }
+      self[i], self[min] = self[min], self[i]
+    }
+    self
+  end
 end
