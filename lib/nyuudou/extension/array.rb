@@ -40,4 +40,25 @@ class Array
     }
     self
   end
+
+  def insertion_sort
+    ary = self.dup
+    (1...ary.length).each { |i|
+      (1..i).reverse_each { |j|
+        break if ary[j-1] <= ary[j]
+        ary[j-1], ary[j] = ary[j], ary[j-1]
+      }
+    }
+    ary
+  end
+
+  def insertion_sort!
+    (1...self.length).each { |i|
+      (1..i).reverse_each { |j|
+        break if self[j-1] <= self[j]
+        self[j-1], self[j] = self[j], self[j-1]
+      }
+    }
+    self
+  end
 end
